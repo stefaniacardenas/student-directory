@@ -1,3 +1,4 @@
+# First, I added a list of students using puts"
 puts "The students of March 2014 cohort at Makers Academy"
 puts "---------------------"
 puts "Josh Fail-Brown"
@@ -19,6 +20,8 @@ puts "Robert Leon"
 puts "Emma Williams"
 puts "Joey Wolf"
 puts "Julie Walker"
+# Finally, I print the total
 print "Overall, we have "
+# I learnt that print doesn't add new lines characters
 print 19
 puts " great students"
