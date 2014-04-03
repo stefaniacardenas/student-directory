@@ -1,6 +1,3 @@
-puts "The students of March 2014 cohort at Makers Academy"
-puts "---------------------"
-
 # I create a list of student using an array
 students = [
 	"Josh Fail-Brown", 
@@ -24,15 +21,41 @@ students = [
 	"Julie Walker",
 	"Random New Guy"
 	]
-# Now I want to print them. To do this I use an iteration.
-students.each do |student|
-	puts student
+
+# Defined a method that allows me to print the header
+def print_header
+	puts "The students of March 2014 cohort at Makers Academy"
+	puts "---------------------"
 end
 
-# Finally, I print the total
-print "Overall, we have #{students.length} great students"
+
+# Defined a method that allows me to print the list
+def print(names)
+	names.each do |name|
+		puts name
+	end
+end
+
+
+# Defined a method that allows me to print the footer
+def print_footer(names)
+	puts "------------------------------------"
+	puts "Overall, we have #{names.length} great students"
+end
+
+# Finally, we call the method
+print_header
+print(students)
+print_footer(students)
+
+
+# In this comment section I add all the things I'm learning while I proceeding through the project.
+# I will probably remove them in the end.
+#--------------------------------------------------
 # I learnt that print doesn't add new lines characters
 
 #If I wanted to add a line using a single string and the print method I should use the escape sequence \n between the lines
 #This is an example of how it would look like
 #print "line1\nline2\nline3"
+
+
