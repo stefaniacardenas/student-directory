@@ -1,30 +1,37 @@
-student_count = 19
-# First, I added a list of students using puts"
 puts "The students of March 2014 cohort at Makers Academy"
 puts "---------------------"
-puts "Josh Fail-Brown"
-puts "Steve Musgrave"
-puts "Sroop Sunar"
-puts "Colin Marshall"
-puts "Louise Lai"
-puts "Robin Doble"
-puts "Alex Wong"
-puts "Scott Dimmock"
-puts "Muhanad Al-Rubaiee"
-puts "Shelley Hope"
-puts "Will Hall"
-puts "Oliver Delevingne"
-puts "Nico"
-puts "Apostolis"
-puts "Stefania"
-puts "Robert Leon"
-puts "Emma Williams"
-puts "Joey Wolf"
-puts "Julie Walker"
-# Finally, I print the total
-print "Overall, we have #{student_count} great students"
-# I learnt that print doesn't add new lines characters
 
+# I create a list of student using an array
+students = [
+	"Josh Fail-Brown", 
+	"Steve Musgrave", 
+	"Sroop Sunar", 
+	"Colin Marshall",
+	"Louise Lai",
+	"Robin Doble",
+	"Alex Wong",
+	"Scott Dimmock",
+	"Muhanad Al-Rubaiee",
+	"Shelley Hope",
+	"Will Hall",
+	"Oliver Delevingne",
+	"Nico",
+	"Apostolis",
+	"Stefania",
+	"Robert Leon",
+	"Emma Williams",
+	"Joey Wolf",
+	"Julie Walker",
+	"Random New Guy"
+	]
+# Now I want to print them. To do this I use an iteration.
+students.each do |student|
+	puts student
+end
+
+# Finally, I print the total
+print "Overall, we have #{students.length} great students"
+# I learnt that print doesn't add new lines characters
 
 #If I wanted to add a line using a single string and the print method I should use the escape sequence \n between the lines
 #This is an example of how it would look like
