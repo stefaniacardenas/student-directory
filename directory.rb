@@ -1,25 +1,25 @@
-# I create a list of student using an array
+# I'm using an hash.
 students = [
-	"Josh Fail-Brown", 
-	"Steve Musgrave", 
-	"Sroop Sunar", 
-	"Colin Marshall",
-	"Louise Lai",
-	"Robin Doble",
-	"Alex Wong",
-	"Scott Dimmock",
-	"Muhanad Al-Rubaiee",
-	"Shelley Hope",
-	"Will Hall",
-	"Oliver Delevingne",
-	"Nico",
-	"Apostolis",
-	"Stefania",
-	"Robert Leon",
-	"Emma Williams",
-	"Joey Wolf",
-	"Julie Walker",
-	"Random New Guy"
+	{:name => "Josh Fail-Brown", :cohort => :march}, 
+	{:name => "Sroop Sunar", :cohort => :march},
+	{:name => "Colin Marshall", :cohort => :march},
+	{:name => "Steve Musgrave", :cohort => :march},
+	{:name => "Louise Lai", :cohort => :march},
+	{:name => "Robin Doble", :cohort => :march},
+	{:name => "Alex Wong", :cohort => :march},
+	{:name => "Scott Dimmock", :cohort => :march},
+	{:name => "Muhanad Al-Rubaiee", :cohort => :march},
+	{:name => "Shelley Hope", :cohort => :march},
+	{:name => "Will Hall", :cohort => :march},
+	{:name => "Oliver Delevingne", :cohort => :march},
+	{:name => "Nico", :cohort => :march},
+	{:name => "Apostolis", :cohort => :march},
+	{:name => "Stefania", :cohort => :march},
+	{:name => "Robert Leon", :cohort => :march},
+	{:name => "Emma Williams", :cohort => :march},
+	{:name => "Joey Wolf", :cohort => :march},
+	{:name => "Julie Walker", :cohort => :march},
+	{:name => "Random New Guy", :cohort => :march}
 	]
 
 # Defined a method that allows me to print the header
@@ -29,10 +29,10 @@ def print_header
 end
 
 
-# Defined a method that allows me to print the list
-def print(names)
-	names.each do |name|
-		puts name
+# Defined a method that allows me to print the hash
+def print(students)
+	students.each do |student|
+		puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
