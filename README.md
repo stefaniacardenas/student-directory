@@ -10,12 +10,10 @@ How to use
 ruby directory.rb
 ```
 
-More details coming soon.
 If you are interested in Makers Academy please visit [Makers Academy] (http://www.makersacademy.com/‎)
 
-Greetings
+Credits
 ---------
 
-Thanks for reading this.
 This file was created by 
-**Stefania**
+**Stefania F. Cardenas**
