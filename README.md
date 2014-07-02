@@ -1,10 +1,7 @@
 #Student Directory
 ==================
 
-This is my first project at Makers Academy. The student directory script allows you to manage the list of students enrolled on the March cohort 2014 at Makers Academy.
-
-
-If you are interested in Makers Academy please visit [Makers Academy] (http://www.makersacademy.com/‎)
+This is my first project at Makers Academy. The student directory script allows you to manage the list of students enrolled on the March cohort 2014 at [Makers Academy] (http://www.makersacademy.com/‎)
 
 Features
 --------
