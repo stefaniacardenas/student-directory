@@ -1,37 +1,37 @@
  @students = [
- 						 "Josh Fail-Brown",
-						 "Steve Musgrave",
-						 "Sroop Sunar",
-						 "Colin Marshall",
-						 "Louise Lai",
-						 "Robin Doble",
-						 "Alex Wong",
-						 "Scott Dimmock",
-						 "Muhanad Al-Rubaiee",
-						 "Shelley Hope",
-						 "Will Hall",
-						 "Oliver Delevingne",
-						 "Nico Saueressig",
-						 "Apostolis Taxidaris",
-						 "Stefania F. Cardenas",
-						 "Robert Leon",
-						 "Emma Williams",
-						 "Joey Wolf"
+ 						 {:name => "Josh Fail-Brown", :cohort => :march },
+						 {:name => "Steve Musgrave", :cohort => :march },
+						 {:name => "Sroop Sunar", :cohort => :march },
+						 {:name => "Colin Marshall", :cohort => :march },
+						 {:name => "Louise Lai", :cohort => :march },
+						 {:name => "Robin Doble", :cohort => :march },
+						 {:name => "Alex Wong", :cohort => :march },
+						 {:name => "Scott Dimmock", :cohort => :march },
+						 {:name => "Muhanad Al-Rubaiee", :cohort => :march },
+						 {:name => "Shelley Hope", :cohort => :march },
+						 {:name => "Will Hall", :cohort => :march },
+						 {:name => "Oliver Delevingne", :cohort => :march },
+						 {:name => "Nico Saueressig", :cohort => :march },
+						 {:name => "Apostolis Taxidaris", :cohort => :march },
+						 {:name => "Stefania F. Cardenas", :cohort => :march },
+						 {:name => "Robert Leon", :cohort => :march },
+						 {:name => "Emma Williams", :cohort => :march },
+						 {:name => "Joey Wolf", :cohort => :march }
 						]
 
 def print_header
-	# \n is an escape sequence. They are widely used in programming.
-	print "The students of March 2014 cohort at Makers Academy\n"
-	print"---------------------\n"
+	puts "The students of March 2014 cohort at Makers Academy"
+	puts "---------------------"
+end
+
+def print(students)
+	@students.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}, (#{student[:cohort]} cohort)" }
 end
 
 def select_names_starting_with(character)
 	puts "Print only names starting with #{character}"
-	@students.select {|name| name.start_with?(character) }
-end
-
-def print_students(students)
-	students.each.with_index(1) {|student, index| puts "#{index}. #{student}" }
+	puts "--" * 10
+	@students.select {|student| puts "#{student[:name]}" if student[:name].start_with?(character) }
 end
 
 def print_footer
@@ -46,8 +46,8 @@ def print_page_break
 end
 
 print_header
-print_students(@students)
+print(@students)
 print_footer
 print_page_break
-print_students(select_names_starting_with("S"))
+select_names_starting_with("S")
 
