@@ -34,9 +34,9 @@ def select_names_starting_with(character)
 	@students.select {|student| puts "#{student[:name]}" if student[:name].start_with?(character) }
 end
 
-def print_footer
+def print_footer(students)
 	puts " "
-	puts "Overall we have #{@students.count} great students"
+	puts "Overall we have #{students.count} great students"
 end
 
 def print_page_break
@@ -45,9 +45,37 @@ def print_page_break
 	puts " "
 end
 
+def user_input
+	puts "Please enter the names of the students of May cohort"
+	puts "To finish, just hit return twice"
+	
+	@may_cohort = []
+
+	name = gets.chomp
+
+	while !name.empty? do 
+		@may_cohort << {:name => name, :cohort => :may }
+			if @may_cohort.count == 1
+				puts "Now we have #{@may_cohort.count} student"
+			else
+				puts "Now we have #{@may_cohort.count} students"
+			end
+		name = gets.chomp
+	end
+
+	puts "The students of May cohort are:"
+	@may_cohort.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}" }
+	# puts "Overall we have #{@may_cohort.count} great students in the May cohort"
+end
+
 print_header
 print(@students)
-print_footer
+print_footer(@students)
 print_page_break
 select_names_starting_with("S")
+print_page_break
+may_cohort = user_input
+print_footer(@may_cohort)
+
+
 
