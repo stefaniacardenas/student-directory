@@ -20,11 +20,11 @@
 						]
 
 def print_header
-	puts "The students of March 2014 cohort at Makers Academy"
-	puts "---------------------"
+	print "The students of March 2014 cohort at Makers Academy\n"
+	print "---------------------\n"
 end
 
-def print(students)
+def display(students)
 	@students.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}, (#{student[:cohort]} cohort)" }
 end
 
@@ -65,11 +65,10 @@ def user_input
 
 	puts "The students of May cohort are:"
 	@may_cohort.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}" }
-	# puts "Overall we have #{@may_cohort.count} great students in the May cohort"
 end
 
 print_header
-print(@students)
+display(@students)
 print_footer(@students)
 print_page_break
 select_names_starting_with("S")
