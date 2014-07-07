@@ -34,6 +34,12 @@ def select_names_starting_with(character)
 	@students.select {|student| puts "#{student[:name]}" if student[:name].start_with?(character) }
 end
 
+def select_names_by(number_of_chars)
+	puts "Print only names shorter than #{number_of_chars} characters"
+	puts "--" * 10
+	@students.select {|student| puts "#{student[:name]}" if student[:name].length < number_of_chars }
+end
+
 def print_footer(students)
 	puts " "
 	puts "Overall we have #{students.count} great students"
@@ -75,6 +81,7 @@ select_names_starting_with("S")
 print_page_break
 may_cohort = user_input
 print_footer(@may_cohort)
+select_names_by(12)
 
 
 
