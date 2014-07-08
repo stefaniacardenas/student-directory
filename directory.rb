@@ -25,7 +25,11 @@ def print_header
 end
 
 def display(students)
-	@students.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}, (#{student[:cohort]} cohort)" }
+	index = 0
+	while( index < @students.length) do 
+		puts "#{index+1}" + ". " + @students[index][:name].to_s + ", " + @students[index][:cohort].to_s + " cohort"
+		index = index+1
+	end 
 end
 
 def select_names_starting_with(character)
@@ -79,9 +83,11 @@ print_footer(@students)
 print_page_break
 select_names_starting_with("S")
 print_page_break
+select_names_by(12)
+print_page_break
 may_cohort = user_input
 print_footer(@may_cohort)
-select_names_by(12)
+
 
 
 
