@@ -57,26 +57,23 @@ def print_page_break
 	puts " "
 end
 
-def user_input
-	puts "Please enter the names of the students of May cohort"
-	puts "To finish, just hit return twice"
-	
-	@may_cohort = []
-
+def create_new_student
+	puts "INSTRUCTIONS: To finish, just hit return twice"
+	puts "Please enter a new student's name"
 	name = gets.chomp
+	puts "Please specify the cohort"
+	cohort = gets.chomp
 
 	while !name.empty? do 
-		@may_cohort << {:name => name, :cohort => :may }
-			if @may_cohort.count == 1
-				puts "Now we have #{@may_cohort.count} student"
+		@students << {:name => name, :cohort => cohort }
+			if @students.count == 1
+				puts "Now we have #{@students.count} student"
 			else
-				puts "Now we have #{@may_cohort.count} students"
+				puts "Now we have #{@students.count} students"
 			end
 		name = gets.chomp
+		cohort = gets.chomp
 	end
-
-	puts "The students of May cohort are:"
-	@may_cohort.each.with_index(1) {|student, index| puts "#{index}. #{student[:name]}" }
 end
 
 print_header
@@ -87,9 +84,8 @@ select_names_starting_with("S")
 print_page_break
 select_names_by(12)
 print_page_break
-may_cohort = user_input
-print_footer(@may_cohort)
-
+add_students = create_new_student
+display(@students)
 
 
 
