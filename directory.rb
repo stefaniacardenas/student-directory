@@ -19,6 +19,8 @@
 						 {:name => "Joey Wolf", :cohort => :march }
 						]
 
+puts "Student directory".center(130)
+
 def print_header
 	print "The students of March 2014 cohort at Makers Academy\n"
 	print "---------------------\n"
