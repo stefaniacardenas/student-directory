@@ -76,6 +76,10 @@ def create_new_student
 	end
 end
 
+def select_by_cohort(cohort)
+	@students.map { |student| puts "#{student[:name]}" if student[:cohort] == cohort }
+end
+
 print_header
 display(@students)
 print_footer(@students)
@@ -86,6 +90,7 @@ select_names_by(12)
 print_page_break
 add_students = create_new_student
 display(@students)
+select_by_cohort(:march)
 
 
 
